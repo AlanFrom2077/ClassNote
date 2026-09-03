@@ -1,0 +1,38 @@
+本节课主要讲解了Java中的控制流，内容比较简单，和之前学习的其他语言没有本质上的区别，主要内容如下：
+
+
+if-else statement:
+格式:
+if(condition){
+	statement
+}
+else if(condition){
+	statement
+}
+else{
+	statement
+}
+
+for-loop statement:
+格式：
+for(initial statement; condition; incrementation){
+	statement
+}
+
+while-loop statement:
+格式：
+while(condition){
+	statement
+}
+
+function define:
+格式：
+accessIdentifier returnType functionName(param){
+	statement
+} 
+
+accessIdentifier有四种:
+1. public: the world
+2. protected: subclass and classes in the same package
+3. default: classes in the same package
+4. private: only this class

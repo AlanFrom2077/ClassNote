@@ -1,0 +1,24 @@
+这两节课主要讲解的是关于在java中对class的基础知识以及使用方法，主要内容也比较简单：
+
+1.static/non-static
+    static和non-static 上课时老师讲解的是看这个被定义的字段field是否具有通用的共用的属性，类似于所有人（class People 都能走，跑
+    吃...... 但是我个人对于static的理解其实很简单，static其实就是这个字段是否从属于类。老师所讲的其实更着重于static关键字的使用场景。
+
+    一旦理解了static字段和类之间的关系，就很容易理解为什么我们在调用static method或者static variable的时候需要利用class name而不是
+    instance来进行调用了（虽然在java中也可以利用instance进行调用就是了，但是尽量别用这个illegal argument
+
+2.变量的分类
+    local variable局部变量 -> 位于方法体内部的变量
+    instance variable成员变量 -> 位于方法外class内部的变量
+    static variable静态变量 -> 从属于类本身的变量
+
+    local variable储存在栈上，其他都储存在堆上 //为什么会储存在栈上其实也很好去理解：程序在执行的过程中，我们知道，所有的method都会
+    形成一个个stack frame。当调用到这个method的时候，stack frame就会入栈，连带着从属于他的local variable一起入栈。到stack frame被
+    弹出的时候，local variable的生命周期也随之结束，这就是为什么我们说local variable都会存储在栈上
+
+3.值传递
+对于java而言，参数的传递总是值传递（pass by value
+//如何理解？因为参数是local的，用完就会被GC销毁，所以不可能是数据本身
+对于基本类型：java传递的是数据本身的copy，因此改变参数不会改变数据原本的值
+对于引用类型：java传递的是地址的copy，也不会改变原本的值
+
