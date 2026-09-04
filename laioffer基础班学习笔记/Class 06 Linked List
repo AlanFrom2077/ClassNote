@@ -1,0 +1,40 @@
+Linked List链表
+链表是一种数据结构，类似于array，是线性的数据结构，但是与array不同的是，array在内存地址上，相邻两个element地址是
+连续的，但是链表不是。链表的中相邻的两个elements之间靠指针相连
+
+这里利用一段java代码创建一个简单的单项列表类作为举例:
+class LinkedList{
+    public int value;
+    public LinkedList next;
+}
+
+接下来是一些关于linked list的常见题目和使用技巧
+    1. 对linked list进行遍历
+        在进行对linked list的遍历的时候，要注意：
+            1.不要失去对头节点head的控制, 不然会丢值，所以最好是用另外一个指针进行访问
+            2.得先确定指向的是非null节点，如果我们要访问p.next.next注意得用p.next! && p!=null
+    
+    2. 如何找到middle node of a linked list （odd直接取，even往前取
+        这个题目有两个做法：
+            1. 利用遍历获得总长后再取中间节点
+            2. 使用快慢指针法
+                //什么是快慢指针法？快慢指针就是用两个指针，一个每次走1步，一个每次走2步，不管这个链表
+                有多长，最终慢指针一定会落在middle node上
+                //需要注意的是，在这种方法下，遍历的结束条件很重要，必须保证快指针的下一个以及下下一个节点不为null，
+                不然快指针就不能走下一步
+    
+    3. 如何在链表中插入新值
+        这个题不管怎么变，其实本质都是一样的，应该把pre的next指针链接到想要插入的node去，然后再把原本的next作为新node
+        的next链接起来
+
+    4. 使用技巧：dummy node
+        dummy node是用来作为临时头节点，他的next指针永远指向真正的head节点
+        dummy node使用情景适用于head节点经常发生变化的情况
+        在最终头节点决定下来之后，利用return dummy.next, 把最后的结果指向头节点 //这里使用了GC的机制
+
+    
+    
+
+
+
+
