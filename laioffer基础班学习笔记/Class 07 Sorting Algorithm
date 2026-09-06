@@ -1,0 +1,27 @@
+在基础班主要提及了以下几种sorting算法
+
+1. selection sort
+selection sort的逻辑很简单，就是不断地取最小值放在一边，或者说进行交换
+这样说可能有点难理解，可以参考下面的代码:
+
+public int[] selectionSort(int[] target){
+    for(int i = 0; i <= target.length - 1; i++){
+        for(int j = 0; j <= target.length - 1; j++){
+            if(target[j] > target[i]){
+                temp = target[i];
+                target[i] = target[j];
+                target[j] = temp
+            }
+        }
+    }
+    return target;
+}
+对于selection sort来说，时间复杂度是O(n^2), 空间复杂度是O(1)
+
+2. merge sort
+merge sort的主要思想是通过不断地拆分，将一个列表拆成一个个元素，然后再进行比较，比如有array {1,3,5,2},
+merge sort会拆成{1}, {3}, {5}, {2}, 然后通过比较，合并，最后合并成一个有序的array，以下是具体代码：
+
+
+
+

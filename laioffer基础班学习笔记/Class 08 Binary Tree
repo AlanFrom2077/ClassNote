@@ -1,0 +1,77 @@
+Binary Tree二叉树
+二叉树的概念其实在前面的学习中也已经接触到了，二叉树实际上就是linked list的一个延申
+普通的linked list可以看作为每次只连一个node的linked list，二叉树就是每次连两个node的linked list
+
+这里用一段java代码来定义一个最简单的binary Tree
+class BinaryTree{
+    int value;
+    BinaryTree left;
+    BinaryTree right;
+
+    public BinaryTree(int value){
+        this.value = value;
+    }
+}
+
+一些基本概念：
+    root node 没有父节点的node
+    leaf node 没有子节点的node
+    child node 拥有父节点的node
+    subtree 与子节点相连的整棵树
+    height of binary tree 从根节点到最深叶节点的距离
+
+遍历一棵树有三种方式
+    pre-order 迭代
+    in-oreder 迭代
+    post-oreder 迭代
+
+pre-order迭代 -> 很简单，其实就是 根 -> 左 -> 右 的顺序
+    示例代码如下:
+        public void preOrder(BinaryTree root){
+            if(root == null){
+                return ;
+            }
+            System.out.println(root.value);
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+
+    时空复杂度：
+        TC: O(n) //所有节点的和
+        SC: O(height) //树的最大高度 worst case -> O(n) best case -> O(log n)
+
+in-order迭代 -> 左 -> 根 -> 右 的顺序
+    示例代码如下：
+        public void inOrder(BinaryTree root){
+            if(root == null){
+                return ;
+            }
+
+            inOrder(root.left);
+            System.out.println(root.value);
+            inOrder(root.right);
+        }
+
+    时空复杂度：
+        TC: O(n) //所有节点的和
+        SC: O(height) //树的最大高度 worst case -> O(n) best case -> O(log n)
+
+post-order迭代 -> 左 -> 右 -> 根
+    示例代码如下：
+        public void postOrder(BinaryTree root){
+            if(root == null){
+                return ;
+            }
+
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.println(root.value);
+        }
+
+    时空复杂度：
+        TC: O(n) //所有节点的和
+        SC: O(height) //树的最大高度 worst case -> O(n) best case -> O(log n)
+
+新概念：平衡二叉树 balanced binary Tree
+平衡二叉树的概念是指：对于二叉树的每一个节点，左右两个子节点的高度的差值都不超过1
+
