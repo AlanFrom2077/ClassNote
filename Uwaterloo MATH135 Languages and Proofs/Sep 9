@@ -1,0 +1,22 @@
+// this is the personal note for Math 135
+
+W0 assignment - due Friday 9:05 pm
+W1 assignment - due next Wedneseday 
+
+contacts: math quesionts: abeltaos@uwaterloo.ca
+          courese logistics: math135@uwaterloo.ca
+
+this is a preview of the proof proceess of math
+
+Ex. Is the following true or false?
+        'for evey positive integer n, n^2 + 1 is not a perfect square'
+
+    the statement is true, but how to prove it?
+        - Note that if the n is a positive number, so then n^2 is a perfect square
+        - the next perfect squre must be (n+1)^2 = n^2 + 2n + 1
+        - n^2 + 2n + 1 always > n^2 + 1 since n is defined as a positive number
+        - the smaller perfect suqre is n^2, whcih means n^2 + 2n + 1 > n^2 > n^2
+        - so we have n^2 + 1 is not a perfect suqre number (since it lies between 2 consecutive number)
+
+
+
