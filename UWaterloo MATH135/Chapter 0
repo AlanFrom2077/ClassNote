@@ -1,10 +1,4 @@
-// this is the personal note for Math 135
-
-W0 assignment - due Friday 9:05 pm
-W1 assignment - due next Wedneseday 
-
-contacts: math quesionts: abeltaos@uwaterloo.ca
-          courese logistics: math135@uwaterloo.ca
+Chapater 0.
 
 this is a preview of the proof proceess of math
 
@@ -17,6 +11,3 @@ Ex. Is the following true or false?
         - n^2 + 2n + 1 always > n^2 + 1 since n is defined as a positive number
         - the smaller perfect suqre is n^2, whcih means n^2 + 2n + 1 > n^2 > n^2
         - so we have n^2 + 1 is not a perfect suqre number (since it lies between 2 consecutive number)
-
-
-
