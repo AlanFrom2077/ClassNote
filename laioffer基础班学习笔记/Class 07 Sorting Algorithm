@@ -74,4 +74,48 @@ class MergeSort{
 空间复杂度则为recursion tree的最大深度O(log n)
 
 3. quick sort
+quick sort的思路和merge sort有相似之处，都是利用分治法和recursion不断地缩小sorting的范围，
+直到最后只剩下一个数字，天然有序
+
+quick sort的具体思路是，在乱序数组中随机选取一个数字，以这个数字为基准，将剩下的元素分成比基准大的数字的数组(大数组)
+和比基准小的数字的数组(小数组)，将他们以 小数组，基准，大数组 的顺序排列，再对小数组和大数组重复上述操作，直到只剩下一个元素
+天然有序。代码如下：
+
+class QuickSort{
+    public QuickSort(int[] target){
+        int left = 0;
+        int right = target.length-1;
+        quickSort(target, left, right);
+    }
+
+    private void quickSort(int[] target, int left, int right){
+        if(left >= right){ //不能改成==或者>, ==保护的是array只有一个元素的情况，>保护的是空区间的情况，空区间是由下面的while决定的，没有办法避免
+            return;
+        }
+        int ref = target[right];
+        int i = left;
+    int j = right-1;
+    while(i <= j){
+        if(target[i] < target[right]){
+            i++;
+        }
+        else{
+            swap(target, i, j);
+            j--;
+        }
+    }
+
+    swap(target, i, right);
+
+    quickSort(target, left, i-1);
+    quickSort(target, i+1, right);
+    }
+    
+    private void swap(int[] target, int i, int j){
+        int temp = target[j];
+        target[j] = target[i];
+        target[i] = temp;
+    }
+}
+
 
