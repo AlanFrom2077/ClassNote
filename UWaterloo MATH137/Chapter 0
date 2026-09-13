@@ -1,3 +1,14 @@
-Before 
+Before we get into this course, we have some content need to be review:
+
+0.1 Functions:
+
+    What is a function:
+    Def: Let X and Y be sets. A function f, is a mapping that assigns to each x E X to exactly one y = f(X) E Y
+
+    How to test a function:
+        If f(x) is a function, it will pass the vertical line test
+
+    The key aspects of functions:
+        - Domain: 
 
 
