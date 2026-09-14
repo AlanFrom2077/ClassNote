@@ -1,14 +1,140 @@
 Before we get into this course, we have some content need to be review:
 
-0.1 Functions:
+this is the pre-cal section:
 
-    What is a function:
-    Def: Let X and Y be sets. A function f, is a mapping that assigns to each x E X to exactly one y = f(X) E Y
+Functions:
+    1. Function:
+        Def: Let X and Y be sets. A function f, is a mapping that assigns to each x ∈ X to exactly one y = f(X) ∈ Y
 
-    How to test a function:
-        If f(x) is a function, it will pass the vertical line test
+    VLT(vertical line test):
+        If f(x) is a function, it will pass the vertical line test. If there are two intercepts on the vertical line, that means there are two outputs (y-value) for single input. So that won't be a function.
 
     The key aspects of functions:
-        - Domain: 
+        - Domain: the set of all possible input values for which the function is defined
+        - Range: the set of all possible output values
+        - roots/x-intercepts: we have function f(x), x-int/roots are the x-value that where f(x) = 0
+
+    2. Inverse Function:
+        The function resulting from a reflection across the line y=x;
+
+    Process of transfer a function to be its inverse function:
+        0. put it into y = f(x) form
+        1. swap x and y
+        2. solve for y
+            Ex. y = x + 1 
+                -> x = y + 1
+                -> x - 1 = y
+                -> y = x - 1
+                f^-1(x) = x - 1
+
+        Note: we have that f(a) = b ⇔ f^-1(b) = a
+              so that if we get a function like f(5) = 0, it must have f^-1(0) = 5
+
+    HLT(horizontal line test):
+        If f(x) is invertible, it will pass the horizontal line test. IF there are two intercepts on the horizontal line, that means there are two outputs (y-value) for single input of the inverse function. So that the inverse function won't be a real function.
+
+    3. interval notation:   
+        by using interval notation, we can easily express the range without using >< or =
+        in interval notation, () means open interval, [] means close interval
+            Ex. x > 2 -> x ∈ (2, ∞)
+                x ≤ 2 -> x ∈ (-∞, 2]
+                2 ≤ x < 3 or x > 5 -> x ∈ [2, 3) U (5, ∞)
+
+    4. odd/even function:
+        A function f(x) is even if f(-x) = f(x)
+        A function f(x) is odd if f(-x) = -f(x)
+
+    5. normal functions:
+        1. y = x 
+            -> D: x ∈ (-∞, ∞)
+            -> R: y ∈ (-∞, ∞)
+            -> passes VLT: so it is a function
+            -> passes HLT: so it is invertible
+                -> f^-1(X) = x
+            -> odd function
+        
+        2. y = x^2
+            -> D: x ∈ (-∞, ∞)
+            -> R: y ∈ [0, ∞)
+            -> passes VLT: so it is a function
+            -> f(x) = f(-x) even function
+            -> didn't pass HLT: it is not invertible
+
+        3. y = √x
+            -> D: x ∈ [0, ∞)
+            -> R: y ∈ [0, ∞)
+            -> passes VLT: so it is a function
+            -> passes HLT: so it is invertible
+            
+        4. y = e^x and y = ln(x)
+            y = e^x
+                -> D: x ∈ (-∞, ∞)
+                -> R: y ∈ (0, ∞)
+                
+            y = ln(x)
+                -> inverse function of y = e^x
+                -> D: x ∈ (0, ∞)
+                -> R: y ∈ (-∞, ∞)
+
+            //small notes about log and ln:
+                log a(b) + log a(c) = log a (b*c)
+                log a(b) - log a(c) = log a (b/c)
+                base-change equation: log a b = ln(b)/ln(a) = log c(b)/log c(a)
+
+        5. y = 1/x
+            -> D: x ∈ (-∞, 0)U(0, ∞)
+            -> R: y ∈ (-∞, 0)U(0, ∞)
+            -> inverse function is itself
+            -> odd function
+        
+        6. y = sin(x)
+            -> D: x ∈ (-∞, ∞)
+            -> R: y ∈ [-1, 1]
+            -> odd function
+            -> period: 2pi
+
+        7. y = sin(x)
+            -> D: x ∈ (-∞, ∞)
+            -> R: y ∈ [-1, 1]
+            -> even function
+            -> period: 2pi
+
+        6. y = tan(x)
+            -> D: x ∈ (-∞, ∞) / {pi/2 + kpi : k ∈ Z}
+            -> R: y ∈ (-∞, ∞)
+            -> odd function
+            -> period: pi
+
+    6. function composition:
+        we have two function f(x) g(x), the composite function f of g is f(g(x))
+
+        Note:   the composition function is not commutative, which means f(g(x)) != g(f(x))
+
+        Domain:
+            for composite function f(g(x)), the domain of this function 
+
+        Note: f(f^-1(x)) = x = f^-1(f(x)) on the relevant domain
+
+Polynomial long division:
+    Ex. fully factor:   f(x) = x^3 + 10x^2 + 13x - 24
+        notice that when f(1) = 0. so x-1 is a factor of f(x):
+        
+                 x^2 + 11x +   24
+                 ______________________            
+            x-1 /x^3 + 10x^2 + 13x - 24
+                 x^3 - x^2
+                 ----------------------
+                       11x^2 + 13x
+                       11x^2 - 11x
+                       ----------------
+                               24x - 24
+                               24x - 24
+                               --------
+                                      0
+        notice that x^2 + 11x + 24 = (x+3)(x+8)
+        so that x^3 + 10x^2 + 13x - 24 = (x+3)(x+8)(x-1)
+    
 
 
+
+ 
