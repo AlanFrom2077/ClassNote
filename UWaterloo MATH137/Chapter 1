@@ -1,0 +1,87 @@
+
+Abs Value: 
+    1. Absolute Value:
+        In this course, we have two ways to consider what is abs value:
+            1. consider the abs as a piece-wise function:
+                |x| = {x if x >= 0
+                    {-x if x<0
+            2. consider the abs as the distance of x from zero
+
+        base on the second consideration, we can extend it:
+            -> distance between a and b is |a-b|
+            -> |a|, is actually |a-0|
+
+        Note: in general, |b-a| = |a-b| gives the distance btw a & b ∀ a, b ∈ R
+
+    2. the triangle inequality I
+        Theorem: For a, b, c ∈ R, we have:
+            |a-b| <= |a-c| + |c-b|
+
+        proof 1: 2D senario:
+            For triangle a,b,c, we have: 
+                    a          
+                    /\      theory: the sum of length of any two sides of tri must greater than
+                /  \             length of the third side. 
+                /____\ 
+                b      c
+            but why <=?
+                let's think about it, if the three sides are coincide, the sum of short two sides may
+                equals to the third side.
+
+        proof 2: 1D senario:
+            Let x <= y, there will be 3 cases:  
+                case 1: z < x
+                    z        x             y
+                    |________|_____________|
+                    From the figure, we can clearly see that |x-y| < |z-y|
+                        -> since z < x
+                        -> |x - y| <= |z - x| + |z - y|
+
+                case 2: x<=z<=y 
+                    x        z             y
+                    |________|_____________|
+                    From the figure, we find that |x-y| = |x-z|+|z-y|, which is also implies that |x-y| <= |x-z| + |z-y| as desired
+
+                case 3: y < Z
+                    x        y             z
+                    |________|_____________|
+                    From the figure, we find that |x-y| < |x-z|. Hence, |x-y| <= |x-z|+|z-y|
+
+    3. triangle inequality II 
+        Theorem: For all a, b ∈ R, we have:
+            |a + b| <= |a| + |b|
+
+        proof: 
+            Using triangle inequality I, with x = a, y = -b, and z = 0:
+                |x-y| <= |x-z|+|z-y|
+                -> |a-(-b)| <= |a-0|+|0-(-b)|
+                -> |a+b| <= |a|+|b|
+
+
+    4. three typical abs value inequality:
+        let a ∈ R and δ > 0. 
+        1. |x-a| < δ
+            for this inequality, the solution must in the intervel: (a - δ, a + δ)
+
+            geometrically understanding of this inequality:
+                |x-a| is the distance x to a
+                |x-a| means the distance of x to a is less than δ, which is (a - δ, a + δ)
+
+        2. |x-a| <= δ
+            similar idea, for this, the solution must in the intervel: [a - δ, a + δ]
+
+            geometrically understanding of this inequality:
+                it means that the distance of x to a is not greater than δ, which is [a - δ, a + δ]
+
+        3. 0 < |x-a| < δ
+            for this situation, we need to divide this inequality into 2 parts
+                0 < |x-a| and |x-a| < δ
+                notice there are two intervel of x, x >= a, and x < a 
+                so that after calculate the intervel, we union them together, the result will be (a - δ, a) U (a, a + δ)
+
+            geometrically understanding of this inequality:
+                it just means x can't be a, that is the distance between x and a cant be 0
+                so the solution is in the intervel (a - δ, a) U (a, a + δ), there is a discontinuity on x=a
+
+
+
