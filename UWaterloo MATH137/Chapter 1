@@ -21,9 +21,9 @@ Abs Value:
             For triangle a,b,c, we have: 
                     a          
                     /\      theory: the sum of length of any two sides of tri must greater than
-                /  \             length of the third side. 
-                /____\ 
-                b      c
+                   /  \             length of the third side. 
+                  /____\ 
+                 b      c
             but why <=?
                 let's think about it, if the three sides are coincide, the sum of short two sides may
                 equals to the third side.
