@@ -1,6 +1,6 @@
-Chapater 0.
+Chapater 1. introduction to the language of mathematics
 
-this is a preview of the proof proceess of math
+1.1 this is a preview of the proof proceess of math
 
 Ex. Is the following true or false?
         'for evey positive integer n, n^2 + 1 is not a perfect square'
@@ -11,3 +11,144 @@ Ex. Is the following true or false?
         - n^2 + 2n + 1 always > n^2 + 1 since n is defined as a positive number
         - the smaller perfect suqre is n^2, whcih means n^2 + 2n + 1 > n^2 > n^2
         - so we have n^2 + 1 is not a perfect suqre number (since it lies between 2 consecutive number)
+
+1.2 sets
+    Def: A set is a well-defined, unordered collection of distinct objects. Each object
+    that appear in this collection is called an element (or member) of the set.
+
+    note:
+        - unordered means you don't have to put the number by any order
+        - distinct means the set don't allow element duplicate
+
+    Sets notations:
+        List the elements, seperated by commas, in any order, surrounding the list with 
+        curly brackets.
+            Ex. {3, 7, -1}
+
+        Note: if there is an empty set, means set with no elements
+              denote it by {} or ∅
+
+        some examples of sets:
+            1. {2,4,6,8}
+            2. {1,2,{1,2,3}} 
+                note: for this set, if asking is element 3 in this set? the answer is no. 
+                      For this set, the element if 1,2 and a set. The internal set has element
+                      3 doesnt mean that the outer one has it.
+            3. Here are some some pre-defined sets:
+                N - natural number {1,2,3,4,5...}
+                Z - integer {-1,-2,0,1,2...}
+                R - real number
+                Q - rational number {a/b, a ∈ R, b ∈ R}
+
+1.2.2 parity
+    Def: The parity of an integer is even if the integer is a multiple of 2, and odd otherwise
+
+    belongs to and not belons to notation:
+        if an element A belongs to a set B, we say A ∈ b
+        if not, we say A ∉ B
+
+1.3 Mathematical statements and negation
+    Statement:
+        Def: A statement is a sentence that has a definite state of being either true or false
+            Ex. 2 + 5 = 7
+                if x = 3, then x^2 = 9
+        
+        on the other hand, if a sentence that cant easily be determined by true or false, 
+        it won't be a statement
+            Ex. x^2 = 9
+                x^2 >= 0 note: this is not a statement, since we didn't point out what the domain it has,
+                               so that we cant determine it is correct or not.
+                x = 3
+
+    Negation:
+        Def: if A is a statement. Then the negation of A, denoted by ¬A. That is, if the A is 
+            true statement, then ¬A is the false statement. ¬A always means the oppsite truth value.
+
+1.4 Quantifiers and Quantified statements
+    
+    Open sentence:
+        A sentence that contains a bariable, where the truth of the sentence is determined by the value of 
+        the varialbe chosen from the domain of the variable. (and technically, the question of truth has no meaning
+        unless a value for the variable is specified)
+
+        note: open statement is NOT a statement
+    
+    Quantified statements:
+        A quantified statement is obtained by attaching a quantifier to an open statement P(x), specifying how many
+        values of the variable make the statement true
+
+        A quantified statement contains four parts:
+            - a quantifier (universal, or existential)
+            - a variable
+            - a domain
+            - an open sentence involving the variable
+
+    Two types of quantified statements:
+        suppose taht we are given S and an open sentence P(x). We consider two types of quantified statements:
+
+        1. A universally quantified statement is of the form:
+            ∀ x ∈ S, P(x)
+            "For all x in S, P(x)"
+            ∀ is quantifier, x is variable, s is domain, p(x) is open sentence
+
+        2. An existentially quantified statement is of the form:
+            ∃ x ∈ S, P(x)
+            "There exists an x in S such that P(x)"
+            ∃ is quantifier, x is variable, s is domain, p(x) is open sentence
+
+    Negation of Quantifiers:
+        Quantified statement         True                        False
+            ∀ x ∈ S, P(x)       when P(x) is true        when P(x) is false for 
+                                for every x ∈ S are      at least one x ∈ S is false
+                                true
+            ∃ x ∈ S, P(x)       when P(x) is true for   when P(x) is false for
+                                for at least one x ∈ S  every x ∈ S are false 
+                                is true
+        we can write logical equivalence with "≡" sign, it means logically equal
+            Ex. ¬(∀x ∈S, P(x)) ≡ (∃x ∈S, ¬ P(x))
+
+    How to get the negation of a quantified statement:
+        1. reverse the quantifier
+        2. reverse the open sentence 
+
+1.5 Nested Quantifiers:
+    The quantifier in a statement containing more than one quantifier are called nested quantifier
+        Ex. ∀ s ∈ R, ∃ t ∈ R, t > s
+            read as "for all real number s, there exists at least a real number t, which t > s"
+    
+    when dealing with the nested quantified statement, must be vary careful about the left to right order
+    it may change the truth of the statement
+    based on this, there will be 3 situations:
+
+    case 1. two different quantifier:   
+        suppose that X and Y are any sets, and Q(x, y) is any open sentence
+            ∀ x ∈ X, ∃ y ∈ Y, Q(x, y) and ∃ y ∈ Y, ∀ x ∈ X, Q(x, y)
+        are not logically equivalent
+
+    case 2. two universal quantifier:
+        suppose that X and Y are any sets, and Q(x, y) is any open sentence
+            ∀ x ∈ X, ∀ y ∈ Y, Q(x, y) and ∀ y ∈ Y, ∀ x ∈ X, Q(x, y)
+        are logically equivalent
+
+    case 3. two existential quantifier:
+        suppose that X and Y are any sets, and Q(x, y) is any open sentence
+            ∃ x ∈ X, ∃ y ∈ Y, Q(x, y) and ∃ y ∈ Y, ∃ x ∈ X, Q(x, y)
+        are logically equivalent
+
+    for number of quantifier is more than 2, we can analysis them with layers:
+        Ex. ∃ x ∈ X, ∀ y ∈ Y, ∃ z ∈ Z, R(x, y, z)
+            -> ∃ x ∈ X, (∀ y ∈ Y, (∃ z ∈ Z, R(x, y, z)))
+                {∃ x ∈ X, P(x),
+                {where P(x) is ∀ y ∈ Y, Q(x, y),
+                {where Q(x, y) is ∃ z ∈ Z, R(x, y, z)
+    
+    Negation of Nested Quantifiers:
+        For getting the negation of nested quantifier, just find the nagation layer by layer
+            Ex.
+                ¬(∃ x ∈ X, P(x)) ≡ (∀ x ∈ X, ¬P(x))
+            -> where ¬P(x) ≡ ¬(∀ y ∈ Y, Q(x, y)) ≡ (∃ y ∈ Y, ¬ Q(x, y))
+            -> where ¬Q(x, y) ≡ ¬(∃ z ∈ Z, R(x, y, z)) ≡ (∀z ∈Z, ¬ R(x, y, z))
+
+            putting all sub-layer nagation together:
+                we get the final result: 
+                   ¬(∃x ∈X, ∀y ∈Y, ∃z ∈Z, R(x, y, z)) ≡ (∀x ∈X, ∃y ∈Y, ∀z ∈Z, ¬ R(x, y, z))
