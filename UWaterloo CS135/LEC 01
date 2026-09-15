@@ -1,0 +1,90 @@
+values and expressions
+
+1. prefix notation
+    We usually use infix notation for mathematic expressions:
+        Ex. ((6/2) * (1+2))
+
+    But in Racket language, we use prefix notation, which looks like:
+        Ex. (* (/ 6 2) (+ 1 2))
+
+    basic arithmetic operators:
+        there are four basic operators:
+            addition +
+            subtraction -
+            multiplication *
+            division /
+        
+        note: the subtraction also can be the negative sign
+            (- 144) -> -144
+
+2. number types:   
+    natural numbers:
+        natural numbers are defined as:
+            - 0 is a natural number
+            - if n is a natural number, then n + 1 is a natural number
+        We write Nat to indicate natural numbers in Racket
+
+    Integers:
+        We write Int to indicate integers
+
+    Rational numbers:
+        We write Rat to indicate rational numbers
+
+        note: rational numbers are exact in Racket
+            Ex. (/ 3 2)
+                outputs: 1 1/2
+    subtype:
+        Nat <- Int <- Rat 
+        
+        note: if an operator or function works for a type it will automatically work for its subtypes
+        
+    In Racket, Nat, Int and Rat values can be arbitrarily large or small
+    The compiler wont limit the size of data type
+
+3. quotient and remainder operators
+    quotient: output the quotient of the division
+    remainder: output the remainder of the divsion
+    Ex. (quotient 43 7) outputs: 6
+        (remainder 43 7) outputs: 1
+
+    note: 1. These operations provide Int division without creating a Rat
+          2. They only work on Ints and will produce an error if applied to rats
+
+4. max and min operator
+    max: return the max value in the bracket
+    min: return the min value in the bracket
+
+    note: unlike arithmatic operators, they can work on a single value like this:
+        Ex. (max 9) -> outputs: 9
+            (min 9) -> outputs: 9
+
+5. sqr and expt operators:
+    sqr: return the square value 
+    expt: return the exponentiation results
+
+    Ex. (sqr 12) -> outputs: 144
+        (expt 3 2) -> outputs: 9
+
+6. constants
+    in Racket, there's no variables. All variables are contants, which mean once they have been 
+    defined, they cant be changed in the future.
+
+    To define constant:
+        using define key words like this:
+            Ex. (define x 7) -> x = 7
+
+7. comparing operators and logic operators
+    the comparing operators in Racket are:
+        > < >= <= = 
+    the logic operators:
+        and or not
+
+    De morgan's laws:
+        For boolean expressions A and B, we have:
+            (not (and A B)) == (or (not A) (not B))
+            (not (or A B)) == (and (not A) (not B))
+
+            
+
+    
+
