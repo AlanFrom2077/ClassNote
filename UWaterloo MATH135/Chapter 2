@@ -1,0 +1,66 @@
+Logical analysis of mathematical statements:
+    
+1. truth table and negation:
+    If A is a statement, the negation "¬" is called a logical operator
+
+    The statement "¬A" is called a logical expressions
+    
+    The truth table shows all the outputs of the statement and logical expression
+        Ex. __________
+           |  A | ¬A  |
+           |  T |  F  |
+           | _F_|__T__|
+
+    note: in the truth table, we usually consider statement A as a variable which may has T or F value. Based on this, sometimes we may
+        call A as statement variable.
+
+2. conjunction and disjunction
+    conjunction - means connects together -> and 
+    disjunction - opposite conjunction -> or
+
+    Compound statement:
+        compound statement is a statement composed of several individual statements. each of which is called compound statement
+
+    Conjunction:
+        The truth value for A and B, written sybomatically by A ∧ B, is defined by the truth table:
+            ___________________
+           |__A_|__B__|__A∧B___|
+           |__T_|__T__|___T____|
+           |__F_|__F__|___F____|
+           |__T_|__F__|___F____|
+           |__F_|__T__|___F____|
+
+        Ex. (1+2=3) ∧ (3+1=4) -> true
+
+    Disjunction:
+        The truth value for A and B, written sybomatically by A ∨ B, is defined by the truth table:
+            ___________________
+           |__A_|__B__|__A∨B___|
+           |__T_|__T__|___T____|
+           |__F_|__F__|___F____|
+           |__T_|__F__|___T____|
+           |__F_|__T__|___T____|
+
+        Ex. (1+2 != 3) or (1+2 = 3) -> true
+
+    Some laws about conjunction and disjunction:
+        De morgan's law:
+            ¬(A∧B)≡¬(A)∨¬(B)
+            ¬(A∨B)≡¬(A)∧¬(B)
+
+        Commutative law:
+            A∨B ≡ B∨A
+            A∧B ≡ B∧A
+
+        associatative law:
+            A∧(B∧C) ≡ (A∧B)∧C
+            A∨(B∨C) ≡ (A∨B)∨C
+
+        distributive law:
+            A ∧ (B ∨ C) ≡(A ∧ B) ∨ (A ∧ C)
+            A ∨ (B ∧ C) ≡(A ∨ B) ∧ (A ∨ C)
+
+    
+
+
+    
