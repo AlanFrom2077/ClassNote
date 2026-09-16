@@ -60,7 +60,50 @@ Logical analysis of mathematical statements:
             A ∧ (B ∨ C) ≡(A ∧ B) ∨ (A ∧ C)
             A ∨ (B ∧ C) ≡(A ∨ B) ∧ (A ∨ C)
 
-    
+3.implication
+    the truth value for "A implies B", written symbolically as A ⇒ B is defined by the truth table:
+            ___________________
+           |__A_|__B__|__A⇒B__|
+           |__T_|__T__|___T____|
+           |__F_|__F__|___T____|
+           |__T_|__F__|___F____|
+           |__F_|__T__|___T____|
+    component A is referred to as the hypothesis, B is referred to as the conclusion
+
+    p ⇒ q 
+    p -> hypothesis: something you know
+    q -> conclusion: something you want to know
+
+    the implication B ⇒ A is called the converse of A ⇒ B
+         B ⇒ A !≡ A ⇒ B
+
+    the implication ¬B ⇒ ¬A is called the contrapositive of A ⇒ B
+        A ⇒ B ≡ ¬B ⇒ ¬A
+
+    note: since from the truth table, we discover that if A is F, the result of A ⇒ B is always true.
+        That is, if we want to determine the truth of the logical expression, we only consider the two 
+        situations when A is T.
+
+    note2: For statement variables A, B and C, we have:
+        ((A ∨ B) ⇒ C) ≡ ((A ⇒ C) ∧ (B ⇒ C))
+
+    note3: For statement variables A and Bm we have:
+        (A ⇒ B) ≡ ((¬A) ∨ B) ,  ¬(A ⇒ B) ≡ (A ∧ (¬B))
+
+4. if and not if
+    the truth value for "A if and only if B", written symbolically as A B, is defined by the truth table:
+            ___________________
+           |__A_|__B__|__A⇔B__|
+           |__T_|__T__|___T____|
+           |__F_|__F__|___T____|
+           |__T_|__F__|___F____|
+           |__F_|__T__|___F____|
+
+    note: For statement variable A and B, we have:
+        (A ⇔ B) ≡ ((A ⇒ B) ∧ (B ⇒ A))
+
+    note2: we also have the logical equivalence for univerally quantified statements
+        (∀ x ∈ X, P (x) ⇔ Q(x)) ≡ (∀ x ∈ X, P (x) ⇒ Q(x)) ∧ (∀ x ∈ X, Q(x) ⇒ P (x))
 
 
     
