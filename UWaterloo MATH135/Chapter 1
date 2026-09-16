@@ -152,3 +152,5 @@ Ex. Is the following true or false?
             putting all sub-layer nagation together:
                 we get the final result: 
                    ¬(∃x ∈X, ∀y ∈Y, ∃z ∈Z, R(x, y, z)) ≡ (∀x ∈X, ∃y ∈Y, ∀z ∈Z, ¬ R(x, y, z))
+
+                
