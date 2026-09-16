@@ -7,9 +7,9 @@ Logical analysis of mathematical statements:
     
     The truth table shows all the outputs of the statement and logical expression
         Ex. __________
-           |  A | ¬A  |
-           |  T |  F  |
-           | _F_|__T__|
+           |__A_|_¬A__|
+           |__T_|__F__|
+           |__F_|__T__|
 
     note: in the truth table, we usually consider statement A as a variable which may has T or F value. Based on this, sometimes we may
         call A as statement variable.
