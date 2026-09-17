@@ -76,10 +76,10 @@ Binary search是著名的搜索算法，主要适用于：
                             right = mid-1 //暂时存放合适的index，向左找更早的
                         }
                         else if(range[mid] > target){
-                            right = mid + 1;
+                            right = mid - 1;
                         }
                         else if(range[mid] < target){
-                            left = mid - 1;
+                            left = mid + 1;
                         }
                     }
                     return result;
