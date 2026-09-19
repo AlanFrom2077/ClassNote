@@ -1,0 +1,47 @@
+/*
+Given a target integer T and an integer array A sorted in ascending order, find the index of the first occurrence of T in A or return -1 if there is no such index.
+
+Assumptions
+
+There can be duplicate elements in the array.
+Examples
+
+A = {1, 2, 3}, T = 2, return 1
+A = {1, 2, 3}, T = 4, return -1
+A = {1, 2, 2, 2, 3}, T = 2, return 1
+Corner Cases
+
+What if A is null or A of zero length? We should return -1 in this case.
+*/
+
+public int firstOccurrence(int[] array, target){
+    int left = 0;
+    int right = array.length - 1;
+    int index = -1;
+    
+    while(left <= right){
+        int mid = left + (right - left)/2; 
+
+        if(array[mid] == target){
+            index = mid;
+            right = mid - 1;
+        }
+        else if(array[mid] > target){
+            right = mid - 1;
+        }
+        else if(array[mid] < target){
+            left = mid + 1;
+        }
+    }
+    return index;
+}
+
+/*
+此题为BS母题2
+
+找first occurrence和普通的BS的区别就在于，当mid == target的时候，我们不敢轻易放弃mid这个值，也许它就是first occurrence，也有可能前面还有别的target
+那么我们就应该用一个额外的变量来暂时存储这个occurrence的index，然后缩小范围往前找（first occurrence肯定总是出现再左边
+如果剩下的array里面还有，就重复上述的过程
+
+这个方法基于分治法，缩小了linear search所需的时间
+*/
