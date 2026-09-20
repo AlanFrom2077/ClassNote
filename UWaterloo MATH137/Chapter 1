@@ -1,5 +1,5 @@
 
-Abs Value: 
+1.1 Abs Value: 
     1. Absolute Value:
         In this course, we have two ways to consider what is abs value:
             1. consider the abs as a piece-wise function:
@@ -82,6 +82,14 @@ Abs Value:
             geometrically understanding of this inequality:
                 it just means x can't be a, that is the distance between x and a cant be 0
                 so the solution is in the intervel (a - δ, a) U (a, a + δ), there is a discontinuity on x=a
+
+1.2 sequences and their limits
+    infinite sequence:
+        DEF:
+            An infinite sequence of real numbers is a list of numbers in a definite order
+                a1,a2,a3...,an...
+            where ai ∈ R for i ∈ N. We use the following notations:
+                {a1, a2, a3, ... an} or 
 
 
 

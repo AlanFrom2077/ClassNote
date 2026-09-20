@@ -210,5 +210,54 @@ Binary search是著名的搜索算法，主要适用于：
                     }
                 }
 
+    子题5. k closest in sorted array
+        Ex. given a sorted array, a target, and an integer k, return the k closest elements to the target in the array
 
+            sample: A = {1,2,3}, T = 2, k = 3, return {1,2,3};
+                    A = {1,4,6}, T = 3, k = 1, return {4};
+                    A = {1,4,6}, T = 5, k = 2, return {4,6};
+                    A = {1,3,3,4}, T = 2, k = 3, return {1,3,3};
+
+            solution: 对于这个题，其实就是closest in sorted array的变体
+                我们可以先找到closest的index，然后利用双指针向两边扩展，直到找到k个元素为止
+
+            代如下：
+                class kClosestBinarySearch{
+                    public kClosestBinarySearch(int[] array, int target, int k){
+                        int left = 0;
+                        int right = target.length - 1;
+                    }
+                }
     
+    子题6. find one missing number
+        Ex. given a sorted array of unique integers where each integer is in the range [0, n] inclusive, 
+            return the only number in the range that is missing from the array
+
+            sample: A = {0,1,2,3,4,5,6,7,9}, return 8;
+                    A = {0,1,2,3,4,5,6,7}, return 8;
+                    A = {0}, return 1;
+                    A = {1}, return 0;
+
+            solution: 对于这个题，我们可以利用binary search来找出missing number
+                我们可以利用一个规律, 注意到如果missing number了，index和element的差值会变，我们就找
+                到这个差值变的地方即可
+
+            代码如下：
+    子题7. find k missing numbers
+        Ex. given a sorted array of unique integers where each integer is in the range [0, n] inclusive, 
+            return the first k missing numbers in the range
+
+            sample: A = {0,1,2,3,4,5,6,7,9}, k = 2, return {8,10};
+                    A = {0,1,2,3,4,5,6,7}, k = 2, return {8,9};
+                    A = {0}, k = 2, return {1,2};
+                    A = {1}, k = 2, return {0,2};
+
+            solution: 对于这个题，我们可以利用binary search来找出missing number
+                我们可以利用一个规律，注意到如果missing number了，index和element的差值会变，而且这个差值会多次变化，我们就找
+                到这个差值变化的地方，然后我们可以利用一个list来存放missing number，直到找到k个为止
+                
+
+            代码如下：
+    
+    子题8. the binary search with peak
+

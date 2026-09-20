@@ -1,0 +1,23 @@
+proving mathematical statements:
+
+proposition:
+    is a true statement that has been proved to be true
+theorem:
+    is a particularly significant proposition
+lemma:
+    is a subsidrary proposition used in the proof of a theorem
+corollary:
+    is a proposition that follows almost immediately from a theorem
+
+3.1 proving universally quantified statement
+
+    prove method: To prove the universally quantified statement ∀ x ∈ S, P(x)
+        1. choose a representative object x ∈ S, x is a placeholder
+        2. show that the open stence P must be true for x, using known facts about the elements of S
+
+    note: for proving universally quantified statement, if unable to find a single line of reasoning that works for all elements in the domain, then might consider a case analsysis
+
+    disprove method: to disprove the universally quantified statement ∀ x ∈ S, P(x)
+        find an element x ∈ S for which the open sentence P(x) is false. This process is called finding a counter-example.
+
+        

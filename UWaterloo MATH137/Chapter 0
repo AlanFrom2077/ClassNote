@@ -4,7 +4,9 @@ this is the pre-cal section:
 
 Functions:
     1. Function:
-        Def: Let X and Y be sets. A function f, is a mapping that assigns to each x ∈ X to exactly one y = f(X) ∈ Y
+        Def: Let X and Y be sets. A function f, is a mapping that assigns to each x ∈ X exactly one y = f(X) ∈ Y
+            We use the notation:
+                f: X -> Y, x -> f(x)
 
     VLT(vertical line test):
         If f(x) is a function, it will pass the vertical line test. If there are two intercepts on the vertical line, that means there are two outputs (y-value) for single input. So that won't be a function.
@@ -76,10 +78,18 @@ Functions:
                 -> D: x ∈ (0, ∞)
                 -> R: y ∈ (-∞, ∞)
 
-            //small notes about log and ln:
+            //notes about log and ln:
                 log a(b) + log a(c) = log a (b*c)
                 log a(b) - log a(c) = log a (b/c)
                 base-change equation: log a b = ln(b)/ln(a) = log c(b)/log c(a)
+
+                e^x * e^y = e^(x+y)
+                (e^x)^y = e^xy
+                ln(e^x) = X
+                ln(x^a) = aln(x)
+                ln(x*y) = ln(x)+ln(y)
+                ln(x/y) = ln(x)-ln(y)
+                e^ln(x) = x
 
         5. y = 1/x
             -> D: x ∈ (-∞, 0)U(0, ∞)
@@ -87,23 +97,39 @@ Functions:
             -> inverse function is itself
             -> odd function
         
-        6. y = sin(x)
+        6.trigonometric functions 
+
+            y = sin(x)
             -> D: x ∈ (-∞, ∞)
             -> R: y ∈ [-1, 1]
             -> odd function
-            -> period: 2pi
+            -> period: 2π
 
-        7. y = sin(x)
+            y = sin(x)
             -> D: x ∈ (-∞, ∞)
             -> R: y ∈ [-1, 1]
             -> even function
-            -> period: 2pi
+            -> period: 2π
 
-        6. y = tan(x)
+            y = tan(x)
             -> D: x ∈ (-∞, ∞) / {pi/2 + kpi : k ∈ Z}
             -> R: y ∈ (-∞, ∞)
             -> odd function
-            -> period: pi
+            -> period: π
+
+            note: the properties of trigonometric functions:
+                pythagorean identity:
+                    cos^2(x) ± sin^2(x) = 1
+                
+                periodicity:
+                    sin(x±2π) = sin(x)
+                    cos(x±2π) = cos(x)
+
+                sum and difference:
+                    cos(𝛼 + 𝛽) = cos(𝛼) cos(𝛽) − sin(𝛼) sin(𝛽),
+                    cos(𝛼 − 𝛽) = cos(𝛼) cos(𝛽) + sin(𝛼) sin(𝛽),
+                    sin(𝛼 + 𝛽) = sin(𝛼) cos(𝛽) + cos(𝛼) sin(𝛽),
+                    sin(𝛼 − 𝛽) = sin(𝛼) cos(𝛽) − cos(𝛼) sin(𝛽).
 
     6. function composition:
         we have two function f(x) g(x), the composite function f of g is f(g(x))
