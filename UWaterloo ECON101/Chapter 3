@@ -6,22 +6,16 @@ Demand
         - relatice price: the ratio of its money price to the money price of its opportunity cost
         - wants: the unlimited sesires or wishes people have for goods and services
 
-    demand something always means:
-        1. want it
+    three condition of demand existence:
+        1. consumers want it
         2. be able to afford it
         3. have made a definite plan to buy it
 
     quantity demanded:
         a good or service is the amount that consumers plan to buy during a particular time period and at a particular price
-            1. plan to buy: doesn't mean the goods/services had been bought
-            2. dimension of time: it indicates during a given period of time, at a particular price.
 
     Law of demand:
         other things remaininng the same, the higher the price of a good, the smaller is the quantity demanded.    
-
-    Law of demand based on two reasons:
-        - subsititution effect: whan an increase in the relative price of a good/services occurs, consumers will purchase less of the good or service and more of a substitute.
-        - income effect: when an increase in the relative price of a good/service occurs, consumers have less money to spend on all goods and services, including the good or service whose price increased
 
     Demand curve:
         demand curve refers to the entire relationship btw the prices of a good or sercive and the quantity demanded ceteris paribus. 
@@ -35,12 +29,9 @@ Demand
 
         In addition, we can also refer to the demand curve as:
             willingness and ability to pay curve or the marginal benefit curve
-            -> this means with more quantity consumers buy, the marginal benefit will diminish
 
         note: only the price will influence demand curve. other factors except price will chenge demand itself.
 
-
-    
     Demand factors:
         based on the factor, the demand curve will shift to right or left, which means the demand itself is influenced.
             - when demand increases, the demand curve shifts rightward
@@ -75,4 +66,62 @@ Demand
 
 
 
+Supply
+    three conditions of supply existence:
+        1. firms have the resources and the technology to produce it
+        2. be able to profit from producing it
+        3. have made a definit plan to produce and sell it
 
+    Quantity supplied: 
+        the amount that producers plan to sell during a given period of time at a particular price
+
+    Law of supply:
+        certeris paribus, the higher the price of a good or service, the larger the quantity supplied will be, and vice versa.
+
+    Supply curve:
+        supply curve refers to the entire relationship btw the prices of a good or sercive and the quantity supplied ceteris paribus.
+
+        Price
+            |      /
+            |     /
+            |    / supply curve
+            |   /
+            |__/___________ Quantity
+
+        In addition, we can also refer to the supply curve as:
+            willingness and ability to sell curve or the marginal cost curve
+
+    Factors of supply:
+        based on the factor, the supply curve will shift to right or left, which means the supply itself is influenced.
+            - when supply increases, the demand curve shifts rightward
+            - when supply decreases, the demand curve shifts leftward
+
+        1. the prices of factors of production
+            supply for a good or service will decrease if the price of a factor of production rises. supply shifts leftward
+        
+        2. the prices of related goods produced
+            - substitute in production: the good/service that can be produced using the same resource
+            - complement in production: the good/service that must be produced together
+
+            The supply for a good or service will decrease if the price of a substitute in production rises.
+
+            the supply of a good or service will increase if the price of a complement in production rises. supply shifts rightward. 
+        
+        3. expected future prices
+            supply for a good or service will decrease if the expected future price rises
+
+        4. number of suppliers
+            supply for a good or service will increase if the number of suppliers rises
+
+        5. technology
+            supply for a good/service will increase if the technology change increases production
+
+        6. state of nature
+            supply for a good or service will increase if a natural event increases production. 
+
+Equailibrium of supply and demand：
+    equailibrium is where supply fully meet the demand. In the supply/demand curve, it is the interception of the two curves
+
+shortage and suplus:
+    shortage: shortage is when at the same price, quantity supplied less than quantity demanded
+    suplus: opposite status of shortage
