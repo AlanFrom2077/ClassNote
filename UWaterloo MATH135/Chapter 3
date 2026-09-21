@@ -20,4 +20,7 @@ corollary:
     disprove method: to disprove the universally quantified statement ∀ x ∈ S, P(x)
         find an element x ∈ S for which the open sentence P(x) is false. This process is called finding a counter-example.
 
-        
+3.2 proving existentially quantified statement
+
+    proof method: To disprove the existentially quantified statement “∃ x ∈ S, P (x)”:
+        Prove the universally quantified statement “∀ x ∈ S, ¬P (x)”.

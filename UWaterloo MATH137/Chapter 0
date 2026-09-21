@@ -118,6 +118,8 @@ Functions:
             -> period: π
 
             note: the properties of trigonometric functions:
+                tan(a) = sin(a)/cos(a)
+
                 pythagorean identity:
                     cos^2(x) ± sin^2(x) = 1
                 
@@ -130,6 +132,11 @@ Functions:
                     cos(𝛼 − 𝛽) = cos(𝛼) cos(𝛽) + sin(𝛼) sin(𝛽),
                     sin(𝛼 + 𝛽) = sin(𝛼) cos(𝛽) + cos(𝛼) sin(𝛽),
                     sin(𝛼 − 𝛽) = sin(𝛼) cos(𝛽) − cos(𝛼) sin(𝛽).
+
+                double angle equation:
+                    sin(2α) = 2sin(α)cos(α)
+                    cos(2a) = cos^2(a)-sin^2(a) = 2cos^2(a) - 1 = 1 - 2sin^2(x)
+                    tan(2a) = 2tan(a)/1-tan^2(x)
 
     6. function composition:
         we have two function f(x) g(x), the composite function f of g is f(g(x))
