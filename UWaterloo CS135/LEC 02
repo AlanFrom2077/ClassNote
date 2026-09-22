@@ -1,0 +1,37 @@
+How to define a function in Racket:
+    (define (f x) (+ (* x x) (* 3 x) 4))
+    (define (g x y)
+        (+ (sqr x) (* 6 x y) (sqr y) (* 9 x) (- (* 3 y)) -100))
+
+function definition:
+    - name for the function
+    - list of parameters
+    - body expression
+
+    Ex. (define (g x y)
+            (+ x y))
+        //(g 1 2) outputs: 3
+
+predicates:
+    the functions that produce Bool values are called predicates
+    
+    By convention, the names of predicates end in a ""
+
+    Ex. (define (cold? t)
+            (< t 8))
+
+identifiers:
+    three rules of identifiers:
+        1. identifiers can contain letters, numbers, -, _, ., ?, =, and alphabetic
+        2. identifiers cannot contain spaces, brackets and quotation marks
+        3. must contain at least one non-number
+
+syntax:
+    is the form of a program: which sequences of symbols constitute valid programs
+
+semantics: 
+    is the meaning of a program: what happens when a syntactically valid program is evaluated
+
+
+
+
