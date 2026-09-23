@@ -24,3 +24,12 @@ corollary:
 
     proof method: To disprove the existentially quantified statement “∃ x ∈ S, P (x)”:
         Prove the universally quantified statement “∀ x ∈ S, ¬P (x)”.
+
+3.3 proving implication
+    for proving an implication:
+        1. to prove the implication A B, assume that the hypothesis A is true, and use this assumption to show that the conclusion B is true. 
+
+        2. to prove the universally quantified implication x S P(x) Q(x) let x be an arbitrary element of S, assume that the hypothesis P(X) is true, and use this assumption to show that the conclusion Q(x) is true.
+
+3.4 divisibility of integers
+    
