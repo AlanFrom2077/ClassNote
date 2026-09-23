@@ -1,0 +1,85 @@
+Conditional expressions in Racket;
+    Ex. (define (f x)
+        (cond [(< x 0) 0]
+              [(>= x 1) 1]
+              [(and (<= 0 x) (< x 1)) (sqr (sin (* x pi)))]))
+
+    key points: 
+    - Each argument to cond is a question/answer pair
+    - the question is a Boolean expression
+    - the answer is a possible value of the conditional expression
+    - by convention, square brackets are used around each question answer pair to improve readability
+
+    else:
+        in the conditional expression, if we meet the corner case, use construct else
+            (define (f x)
+                (cond 
+                    [(< x 0) 0]
+                    [(>= x 1) 1]
+                    [else (sqr (sin (* x pi 1/2)))]))
+        
+        after else, we can write more cond statement in else statement to construct nested if-else
+
+Symbols:
+    A symbol is defined using a leading apostrophe or quote
+        Ex. (define course 'CS135)
+
+    note: unlike the numbers, symbols are self documenting, which means you don't need to define constants for them
+
+    Symbols can be compared using the predicate " symobol=? "
+        Ex. (define mySymbol 'blue)
+            (symbol=? mysymbol 'blue) -> true
+
+check-expect:
+    check-expect is a special racket language feature we use for testing:
+        the syntax looks like:
+            (check-expect expr-test expr-expected)
+                expr-test -> the expression we are testing
+                expr-expected -> the expected result
+            Ex. (define a 13)
+                (check-expect a 13) -> test passed!
+                (check-expect a 14) -> error
+
+check-within:
+    The syntax of check-within:
+        (check-within expr-test expr-expected delta)
+            expr-test -> the expression we are testing
+            expr-expected -> the expected result
+            delta -> the allowed absolute difference between expected and actual results
+
+        Ex. (check-within (sqrt 2) 1.414 0.001)
+
+        note: the delta must be inexact, i tested it
+
+Contract:
+    A contract formally defines what type of arguments a function consumes and what type of 
+    result it produces. A contract is written as a comment before the function definition:
+
+    Ex. 
+        ;; g: Num Num -> Num
+        (define (g x y)
+            (+ x y))
+
+    For symbols, we usually use Sym, but we can also be precise
+    
+    Ex. ;; what-to-wear: Num -> Sym
+        ;; what-to-wear: Num -> (anyof 'jacket 'sweater 'shirt)
+
+    
+Extra requirements;
+    Sometimes a function will have limitation that cant be captured by our formal contract notation.
+    These equirements can be captured by a "requires" clause
+
+    Ex. ;; what-to-wear: Num -> Sym
+        ;; Requires: temperature >= -273.15
+
+note:
+    after this class, in assignment, you need to define using comments
+        - purpose
+        - contract
+        - test coverage
+        - correctness
+    before you define a function
+
+
+
