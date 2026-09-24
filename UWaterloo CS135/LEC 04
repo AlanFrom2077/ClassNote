@@ -1,0 +1,4 @@
+Recursion
+
+f(n) -> 0 if n = 0   ->   corner case
+     -> n + f(n-1) if n > 0   ->    recursive case

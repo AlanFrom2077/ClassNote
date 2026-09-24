@@ -30,6 +30,9 @@ Symbols:
         Ex. (define mySymbol 'blue)
             (symbol=? mysymbol 'blue) -> true
 
+zero? function:
+    this is a built-in function whcih is used for comparing its parameter with 0, if it is equal to 0, return true
+
 check-expect:
     check-expect is a special racket language feature we use for testing:
         the syntax looks like:
