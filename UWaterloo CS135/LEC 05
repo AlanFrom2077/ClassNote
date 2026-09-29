@@ -1,0 +1,42 @@
+LEC 05 List expression:
+
+1. empty list:
+    empty is not same as no list!
+
+    empty -> empty list
+
+2. create list:
+    use 'cons' keyword to add item into a list
+
+    EX. (cons 'bread empty) ;; cons constructs a list by adding an item to the front of another list
+
+    Ex. (cons 'hello
+            (cons 'world
+                (cons 'ok empty))) 
+
+    use 'rest' keyword to erase some item of the list
+
+    Ex. (cons 'hello
+            (rest (cons 'world
+                    (cons 'ok empty)))) -> output: (cons 'hello (cons 'ok empty))
+
+    use 'first' keyword return the first item of the list 
+
+    Ex. (first (cons 'hello
+                    (cons 'world
+                        cons 'ok empty))) -> output: 'hello
+
+3. empty?
+    empty? can be used for testing whether a list is empty or not
+
+4. list of racket list operations
+    cons - constructs a list from a value and a list by adding the value to the front
+    first - consumes a non-empty list and produces the first value in the list 
+    rest - consumes a non-empty list and produces a list with the first 
+    empty? - consumes any and produces true if the value is empty (Any -> Bool)
+    list? - consumes any and produces true if the value is a list
+    cons? - consumes any and produces true if the value is a non-empty list
+
+
+
+
