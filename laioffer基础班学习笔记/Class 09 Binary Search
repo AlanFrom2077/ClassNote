@@ -226,6 +226,7 @@ Binary search是著名的搜索算法，主要适用于：
                     public kClosestBinarySearch(int[] array, int target, int k){
                         int left = 0;
                         int right = target.length - 1;
+                        
                     }
                 }
     

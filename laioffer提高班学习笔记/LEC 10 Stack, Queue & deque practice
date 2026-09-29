@@ -1,0 +1,10 @@
+queue, stack, deque和java中的接口有什么关系：
+                               Iterable
+                                  |
+                              Collection
+                    /                          \
+        List(interface)                       Queue(interface)
+        /              \                               |
+ ArrayList(class)  LinkedList(class)              Deque(interface)
+                                                /                  \
+                                        ArrayDeque(class)      LinkedList(class)
