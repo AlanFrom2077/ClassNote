@@ -1,0 +1,113 @@
+public static void main(String[] args) {
+
+       /* 创建TreeSet
+
+           side note: 
+
+                  我们平时创建数据结构都希望 等号左边declare得越general越好 (more flexible and extensible) 
+
+                  但是下面标黄的部分不能写成Set，因为TreeSet常用的API基本都是TreeSet独有的API, Set没有 
+
+        */    
+
+       TreeSet<Integer> ts = new TreeSet<>(); // 可以像PQ一样在()里传Comparator来改排序
+
+ 
+
+        // add
+
+        ts.add(3);
+
+        ts.add(1);
+
+        ts.addAll(Arrays.asList(2,3,5)); // addAll(Collection<> c)
+
+        System.out.println("add: " + ts); // [1, 2, 3, 5]
+
+ 
+
+        // remove
+
+        ts.remove(3);
+
+        System.out.println("remove 3: " + ts); // [1, 2, 5]
+
+ 
+
+        // contains
+
+        System.out.println("contains 2: " + ts.contains(2)); // true
+
+        System.out.println("contains 3: " + ts.contains(3)); // false
+
+// 返回最小数
+
+        System.out.println("min: " + ts.first()); //1
+
+ 
+
+        // 返回最大数
+
+        System.out.println("max: " + ts.last()); //5
+
+ 
+
+        // 返回 largest smaller or equal to e
+
+        System.out.println("<=10的最大数: " + ts.floor(10)); // 5
+
+        System.out.println("<=5的最大数: " + ts.floor(5)); // 5
+
+ 
+
+        // 返回 smallest larger or equal to e
+
+        System.out.println(">=10的最小数: " + ts.ceiling(10)); //null
+
+        System.out.println(">=4的最小数: " + ts.ceiling(4)); //5
+
+ 
+
+        // 返回 largest smaller than e
+
+        System.out.println("<5的最大数: " + ts.lower(5)); //2
+
+ 
+
+        // 返回 smallest larger than e
+
+        System.out.println(">5的最大数: " + ts.higher(5)); //null
+
+ 
+
+        // 从小到大iterate整个TreeSet
+
+        Iterator value = ts.iterator();
+
+        System.out.print("ascending order: ");
+
+        while (value.hasNext()) {
+
+            System.out.print(value.next() + " "); // 1 2 5 
+
+        }
+
+ 
+
+        System.out.println();
+
+        // 从大到小iterate整个TreeSet
+
+        Iterator descendingValue = ts.descendingIterator();
+
+        System.out.print("descending order: ");
+
+        while (descendingValue.hasNext()) {
+
+            System.out.print(descendingValue.next() + " "); //5 2 1
+
+        }
+
+     }
+
+

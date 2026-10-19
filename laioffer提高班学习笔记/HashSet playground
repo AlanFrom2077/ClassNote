@@ -1,0 +1,121 @@
+static void main() {
+
+        // 创建
+
+        Map<String,Integer> hm = new HashMap<>();
+
+ 
+
+        // put && putIfAbsent
+
+        hm.put("apple",1);
+
+        hm.put("orange",2);
+
+        System.out.println(hm); // {orange=2, apple=1}
+
+        hm.putIfAbsent("apple",2);
+
+        hm.putIfAbsent("peach",3);
+
+        System.out.println(hm);  // {orange=2, apple=1, peach=3}
+
+ 
+
+        // get && getOrDefault
+
+        System.out.println(hm.get("peach"));
+
+        System.out.println(hm.get("watermelon"));
+
+        System.out.println(hm.getOrDefault("watermelon",-1));
+
+        System.out.println(hm.getOrDefault("peach",-1));
+
+ 
+
+        // put + getOrDefault 搭配使用
+
+        hm.put("apple", hm.getOrDefault("apple",0) + 1);
+
+        System.out.println(hm);
+
+        // keySet()
+
+        Set<String> allKeys = hm.keySet();
+
+        System.out.println(allKeys); //[orange, apple, peach]
+
+ 
+
+        // entrySet()
+
+        Set<Map.Entry<String,Integer>> allPairs = hm.entrySet();
+
+        System.out.println(allPairs); // [orange=2, apple=2, peach=3]
+
+ 
+
+        // Method 1: 遍历Map的方法1 enhanced forloop
+
+        int total = 0;
+
+        for(Map.Entry<String,Integer> entry :   hm.entrySet() ){
+
+            total += entry.getValue();
+
+        }
+
+        System.out.println(total);
+
+ 
+
+        // Method 2: entrySet().iterator()
+
+        // set有iterator(), map没有 所以如果要用iterator(), 要先map.entrySet()
+
+        int total2 = 0;
+
+        Iterator<Map.Entry<String,Integer>> it = hm.entrySet().iterator();
+
+        while(it.hasNext()){
+
+            Map.Entry<String,Integer> entry = it.next();
+
+            total2 += entry.getValue();
+
+        }
+
+        System.out.println(total2);
+
+        // Method 3: 用KeySet().iterator
+
+        int total3 = 0;
+
+        Iterator<String> it2 = hm.keySet().iterator();
+
+        while(it2.hasNext()){
+
+            String key = it2.next();
+
+            total3 += hm.get(key);
+
+        }
+
+        System.out.println(total3);
+
+ 
+
+        // forEach(): 对map里的每一个pair做一样的操作
+
+        hm.forEach((key,value) ->
+
+                { value = value + 10;
+
+                  hm.put(key,value);
+
+                });
+
+        System.out.println(hm); // {orange=12, apple=12, peach=13}
+
+    }
